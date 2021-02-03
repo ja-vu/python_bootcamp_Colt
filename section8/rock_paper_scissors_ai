@@ -1,0 +1,29 @@
+from random import randint
+choice = ["rock","paper","scissors"]
+
+print("...rock...")
+print("...paper...")
+print("...scissors...")
+p1 = input("Player: choose rock,paper or scissors").lower()
+ai = choice[randint(0,2)]
+
+print(f"Computer played {ai}")
+if p1 == ai:
+    print("It's a tie!")
+elif p1 == "rock":
+    if ai == "scissors":
+        print("Player1 wins")
+    elif ai == "paper":
+        print("Computer wins")
+elif p1 == "paper":
+    if ai == "rock":
+        print("Player1 wins")
+    elif ai == "scissors":
+        print("Computer wins")
+elif p1 == "scissors":
+    if ai == "paper":
+        print("Player1 wins")
+    elif ai == "rock":
+        print("Computer wins")
+else:
+    print("Something went wrong")
